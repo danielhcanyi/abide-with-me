@@ -1,4 +1,7 @@
 # abide-with-me
+
+> whoever says he abides in him ought to walk in the same way in which he walked. - 1 John 2:6
+
 A journaling space for decisions, observations and reflections, assisted by an A.I. agent that also acts as a mentor to review one's decisions and reflections with the user, and, with a growing understanding of the user, coaches them to be a better and more effective Christian each day.
 
 ## Methodology
