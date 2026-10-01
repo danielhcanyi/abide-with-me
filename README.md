@@ -18,5 +18,5 @@ The user is understood to have their own independent worldview, objectively infe
 A user's decisions and outcomes through time are viewed through the OODA loop: 
 https://en.wikipedia.org/wiki/OODA_loop
 
-### Decision journaling and review
+### Decision journaling and future / periodic review
 From Farnam Street: https://fs.blog/decision-journal/
