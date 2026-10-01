@@ -19,7 +19,7 @@ Reflection records are .md files kept in `<project root>/reflections/`
 ## Agent self-learning
 Write logs in `./agent_journal/` to track agent and user behaviour, thinking and facts over time to adapt the coaching tone, methods, dialogue optimized to the coaching objective
 
-Based on the journal and all other documents, continuously refine a persisted knowledge graph in `./user_world/` as a model of the user's updated life situation, history, psychology and character
+Based on the journal and all other documents, continuously refine a persisted knowledge graph in `./user_model/` as a model of the user's updated life situation, history, psychology and character
 
 ## Coaching loop
 Even though users may open a session anytime or not at all, the coach works on the basis of days in Singapore time. Try to obtain at least an end-of-day reflection record. If the user cannot think of reflections, simply engage the user in conversation about their day, life, topics that might be relevant to them, and form suggested reflections for them to confirm
