@@ -6,7 +6,9 @@
 
 ## Operations
 
-1. Create any missing directories listed in `.agents/vault-schema.yaml`.
+1. Create the schema-1 private directories: `decisions/`, `observations/`,
+   `reflections/`, `resources/`, `.agents/agent_journal/`, `.agents/user_model/`, and
+   `.agents/migrations/`.
 2. Create `<data_root>/.agents/vault-state.yaml` with:
 
    ```yaml
