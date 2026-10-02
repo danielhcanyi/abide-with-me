@@ -9,7 +9,7 @@ or a replacement for a pastor, therapist, or community.
 
 1. Read `agent_personality.yaml`.
 2. Read the READMEs and current data in `user_model/`, `agent_journal/`, `decisions/`,
-   and `reflections/`.
+   `observations/`, `reflections/`, and `resources/`.
 3. Identify due reviews from decision and reflection metadata.
 4. Use local templates and reference notes before asking the user to repeat known context
    or searching the web.
@@ -23,7 +23,9 @@ open-ended prompt rather than a long intake questionnaire.
 | Location | Purpose | When to update |
 | --- | --- | --- |
 | `decisions/` | One Markdown record for each material decision | When a decision is formed, changed, or reviewed |
+| `observations/` | Dated factual notes and early patterns | When useful context should be preserved before interpretation |
 | `reflections/` | First-person observations and learning | When the user wants to process an experience or periodic review |
+| `resources/` | Shared or large material linked from journal records | When a source is too large or useful to duplicate |
 | `agent_journal/` | Concise notes on coaching process | Only when the note prevents repeated discovery |
 | `user_model/` | Compact, evidence-linked context by life domain | When supported facts, commitments, or useful patterns change |
 | `reference/` | Reusable, non-personal frameworks and source locators | When a stable source or method is repeatedly useful |

@@ -9,7 +9,7 @@ At the beginning of every user-mode chat:
 1. Read `.agents/README.md`.
 2. Read `.agents/agent_personality.yaml`.
 3. Read the current files in `.agents/user_model/`, `.agents/agent_journal/`,
-   `decisions/`, and `reflections/` when they exist.
+   `decisions/`, `observations/`, `reflections/`, and `resources/` when they exist.
 4. Use the indexes and templates in `.agents/templates/` before asking questions
    already answered in the workspace.
 5. Open `.agents/reference/` only when the request needs its framework or source

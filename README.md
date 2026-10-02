@@ -61,8 +61,9 @@ From Farnam Street: https://fs.blog/decision-journal/
 - Download / clone this whole project as a folder on your machine
 - Open the folder in an A.I. chat session to use the system
 - Open the folder as an Obsidian vault, for example, to read / edit your journal entries
-- Keep personal records in `decisions/`, `reflections/`, and `.agents/`'s private data
-  directories. They are ignored by Git; confirm the staged diff before every commit.
+- Keep personal records in `decisions/`, `observations/`, `reflections/`, `resources/`,
+  and `.agents/`'s private data directories. They are ignored by Git; confirm the staged
+  diff before every commit.
 - Start a user session by asking the agent to follow `AGENTS.md`. The agent will load the
   current user model, due reviews, templates, and local references before asking for more
   context.
@@ -75,7 +76,8 @@ From Farnam Street: https://fs.blog/decision-journal/
 | `.agents/agent_personality.yaml` | Voice, theological posture, and safety boundaries |
 | `.agents/templates/` | Reusable decision, reflection, coaching-note, and user-model formats |
 | `.agents/reference/` | Offline coaching method and source locators |
-| `decisions/` and `reflections/` | Private, ignored journal records |
+| `decisions/`, `observations/`, and `reflections/` | Private, ignored journal records |
+| `resources/` | Private, ignored shared or large material linked from journal records |
 | `.agents/agent_journal/` and `.agents/user_model/` | Private, ignored durable context and coaching notes |
 
 ## Modifying / Developing / Contributing
