@@ -1,4 +1,4 @@
-# Private vault state. This file is created at <data_root>/.agents/vault-state.yaml.
+# Private vault state. This file is created at <data_root>/agents/vault-state.yaml.
 schema_version: 1
 code_revision: "{{full-current-git-commit-hash}}"
 updated_at: "{{ISO-8601-timestamp}}"

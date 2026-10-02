@@ -221,4 +221,6 @@ __marimo__/
 .obsidian/
 
 # Per-user hybrid workspace configuration. It may reveal a local directory path.
+agents/local-workspace.yaml
+# Legacy configuration path retained so existing users can migrate safely.
 .agents/local-workspace.yaml
