@@ -4,6 +4,11 @@
 
 A journaling space for decisions, observations and reflections, assisted by an A.I. agent that also acts as a mentor to review one's decisions and reflections with the user, and, with a growing understanding of the user, coaches them to be a better and more effective Christian each day.
 
+The workspace is local-first: personal records are ignored by Git, while reusable agent
+instructions, templates, and offline reference notes are versioned. This lets new chat
+sessions recover relevant context from the workspace instead of repeatedly rebuilding it
+from conversation or web searches.
+
 ## Table of Contents
 
 - [Methodology](#methodology)
@@ -56,6 +61,22 @@ From Farnam Street: https://fs.blog/decision-journal/
 - Download / clone this whole project as a folder on your machine
 - Open the folder in an A.I. chat session to use the system
 - Open the folder as an Obsidian vault, for example, to read / edit your journal entries
+- Keep personal records in `decisions/`, `reflections/`, and `.agents/`'s private data
+  directories. They are ignored by Git; confirm the staged diff before every commit.
+- Start a user session by asking the agent to follow `AGENTS.md`. The agent will load the
+  current user model, due reviews, templates, and local references before asking for more
+  context.
+
+### Workspace map
+| Path | Purpose |
+| --- | --- |
+| `AGENTS.md` | Entry point for a compatible coding/chat agent |
+| `.agents/README.md` | User-mode startup protocol and mentoring workflow |
+| `.agents/agent_personality.yaml` | Voice, theological posture, and safety boundaries |
+| `.agents/templates/` | Reusable decision, reflection, coaching-note, and user-model formats |
+| `.agents/reference/` | Offline coaching method and source locators |
+| `decisions/` and `reflections/` | Private, ignored journal records |
+| `.agents/agent_journal/` and `.agents/user_model/` | Private, ignored durable context and coaching notes |
 
 ## Modifying / Developing / Contributing
 
