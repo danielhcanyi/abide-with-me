@@ -2,13 +2,9 @@
 
 > whoever says he abides in him ought to walk in the same way in which he walked. - 1 John 2:6
 
-A journaling space for decisions, observations and reflections, assisted by an A.I. agent that also acts as a mentor to review one's decisions and reflections with the user, and, with a growing understanding of the user, coaches them to be a better and more effective Christian each day.
+An agent chats with the user, collecting their thoughts, organizing them and recording them in structured notes in an obsidian vault.
 
-The workspace is local-first: reusable agent instructions, templates, and offline
-reference notes are versioned, while the user's journal and durable context live in a
-separate local data vault. This lets new chat sessions recover relevant context without
-repeatedly rebuilding it from conversation or web searches, and lets the user see updates
-in their own filesystem immediately.
+With a growing understanding of the user and the outcomes of their decisions, the agent also coaches the user into being a better and more effective Christian each day.
 
 ## Table of Contents
 
