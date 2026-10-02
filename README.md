@@ -59,16 +59,13 @@ From Farnam Street: https://fs.blog/decision-journal/
 ### :warning: PRIVACY WARNING
 **Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked or want the A.I. service to know about you**
 ### Setup
-- Download / clone this whole project as a folder on your machine
+- Download / clone this whole project as a folder on your machine. This folder is the **Project Folder**
+- Create a new Obsidian vault to hold your data. This is the **Private Vault** and holds all your notes and interactions ever.
 - Open the folder in an A.I. chat session to use the system
 - Start a user session by asking the agent to follow `AGENTS.md`. On the first session,
-  the agent asks where the private local data vault should live and saves that absolute
-  path only in the ignored `.agents/local-workspace.yaml` file.
-- Open the chosen data-vault directory—not the Git repository—as an Obsidian vault or in
-  another editor. The user will then see record changes as the agent writes them.
-- The data vault contains `decisions/`, `observations/`, `reflections/`, `resources/`,
-  and `.agents/` context directories. It is never committed, copied, or synchronized by
-  Git. Confirm the staged diff before every commit.
+  the agent asks where the private local data vault should live. Provide the location to the Private vault you have created in Obsidian
+- The Private vault contains `decisions/`, `observations/`, `reflections/`, `resources/`,
+  and `.agents/` context directories.
 
 ### Workspace map
 | Path | Purpose |
