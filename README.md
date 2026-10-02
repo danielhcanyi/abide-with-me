@@ -31,8 +31,17 @@ From Farnam Street: https://fs.blog/decision-journal/
 ## How to use
 
 ### :warning: PRIVACY WARNING
-Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked
+**Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked or want the A.I. service to know about you**
+## Setup
+- Download / clone this whole project as a folder on your machine
+- Open the folder in an A.I. chat session to use the system
+- Open the folder as an Obsidian vault, for example, to read / edit your journal entries
 
-#### As a contributor, be extremely careful about what you commit
+## Modifying / Developing / Contributing
+
+### :warning: PRIVACY WARNING
+#### Be extremely careful about what you commit
 - Though we are setting the repo to automatically ignore the files we know to hold user data, always check the diffs you are committing
 - Be careful not to write personal information in the non-ignored files - you or your agent may have edited these files for personalization  
+### A.I. / agentic development
+Tell the agent in the chat session that you would like to use the `Developer mode`, rather than as a user of the journaling and mentoring system
