@@ -86,11 +86,16 @@ In a user-mode chat, these short commands control the local setup:
 | `.agents/README.md` | User-mode startup protocol and mentoring workflow |
 | `.agents/agent_personality.yaml` | Voice, theological posture, and safety boundaries |
 | `.agents/templates/` | Reusable decision, reflection, coaching-note, and user-model formats |
+| `.agents/vault-schema.yaml` | Current private-vault data-structure version |
+| `.agents/vault-migrations/` | Versioned private-vault migration instructions |
+| `docs/vault-data-changelog.md` | Changelog of private-vault data-structure changes |
 | `.agents/reference/` | Offline coaching method and source locators |
 | `.agents/local-workspace.example.yaml` | Template for the ignored, user-specific data-vault location |
 | `<data root>/decisions/`, `observations/`, and `reflections/` | Live private journal records |
 | `<data root>/resources/` | Live shared or large material linked from journal records |
 | `<data root>/.agents/agent_journal/` and `user_model/` | Live durable context and coaching notes |
+| `<data root>/.agents/vault-state.yaml` | Private schema version and current agent commit hash |
+| `<data root>/.agents/migration-log.md` | Private log of applied data-structure migrations |
 
 ## Modifying / Developing / Contributing
 

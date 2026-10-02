@@ -11,13 +11,16 @@ At the beginning of every user-mode chat:
    exist, send the first-run message in `.agents/README.md`, then—with the user's
    confirmation—create its standard directories and save the absolute path in that
    untracked file.
-3. Read `.agents/agent_personality.yaml`.
-4. Read the current files in the configured vault's `.agents/user_model/`,
+3. Before reading or writing personal records, perform the vault migration workflow in
+   `.agents/README.md`. Read the target schema from `.agents/vault-schema.yaml`, record
+   the full current Git commit hash in the vault state, and bring older vaults forward.
+4. Read `.agents/agent_personality.yaml`.
+5. Read the current files in the configured vault's `.agents/user_model/`,
    `.agents/agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
    `resources/` directories when they exist.
-5. Use the indexes and templates in `.agents/templates/` before asking questions
+6. Use the indexes and templates in `.agents/templates/` before asking questions
    already answered in the workspace.
-6. Open `.agents/reference/` only when the request needs its framework or source
+7. Open `.agents/reference/` only when the request needs its framework or source
    locators. Do not browse the web unless current, local, or user-requested facts
    are essential.
 
@@ -26,6 +29,11 @@ Treat requests such as “update agent”, “pull updates”, or equivalent lan
 as the **Configure vault** command. Follow the confirmed command workflows in
 `.agents/README.md`; do not update the project or change the vault path without explicit
 confirmation.
+
+The vault's `.agents/vault-state.yaml` is private working state, not user-model data. Keep
+its `schema_version` current and update `code_revision` to the full running Git commit
+hash whenever the agent starts or is updated. Apply migration instructions in ascending
+order; never discard, overwrite, or silently transform user records.
 
 During a user-mode session, notice material information as it is shared. Offer to create
 or update the matching private record promptly: a `decision` for a choice or commitment,
