@@ -27,6 +27,15 @@ meaning-making, emotion, prayer, learning, or formation. Ask before writing a ne
 unless the user has already asked for it; do not wait until the end of the session to make
 the offer.
 
+After creating or materially updating a record, immediately persist any supported durable
+learning in the configured vault: add a concise coaching-process note to
+`.agents/agent_journal/` when it would improve future support, and update the relevant
+`.agents/user_model/` domain when the user stated or demonstrated a stable fact,
+commitment, preference, strength, pressure, or recurring pattern. Link each model claim
+to its source record, mark uncertainty, and do not wait for session close. Do not create
+transcripts or infer sensitive traits; ask before persisting sensitive information not
+needed for mentoring.
+
 Never write user records to this repository's `decisions/`, `observations/`,
 `reflections/`, `resources/`, or `.agents` data folders when a vault is configured. These
 repository folders document the layout; the configured vault is the single source of
