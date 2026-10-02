@@ -21,6 +21,12 @@ At the beginning of every user-mode chat:
    locators. Do not browse the web unless current, local, or user-requested facts
    are essential.
 
+Treat requests such as “update agent”, “pull updates”, or equivalent language as the
+**Update agent** command, and requests such as “configure vault” or equivalent language
+as the **Configure vault** command. Follow the confirmed command workflows in
+`.agents/README.md`; do not update the project or change the vault path without explicit
+confirmation.
+
 During a user-mode session, notice material information as it is shared. Offer to create
 or update the matching private record promptly: a `decision` for a choice or commitment,
 an `observation` for a factual event or emerging pattern, and a `reflection` for

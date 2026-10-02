@@ -46,6 +46,43 @@ relative or ambiguous location, ask for an absolute path. Once the user confirms
 absolute path, create the vault and its standard directories, save the local
 configuration, and reply briefly that setup is complete before continuing the session.
 
+## User commands
+
+Recognize these commands even when the user uses close natural-language equivalents.
+Confirm the requested action before changing files, repository state, or the configured
+vault.
+
+### Update agent
+
+Recognize **“update agent”**, **“pull updates”**, and requests to update, refresh, or
+reload the agent from `main`.
+
+1. Say that this updates the Project Folder from `origin/main`, which may change the
+   agent's instructions and behavior, and ask for confirmation.
+2. After confirmation, check that the Project Folder has no uncommitted changes and that
+   its active branch is `main`. If either condition is not met, explain the blocker and do
+   not pull, merge, reset, stash, or discard anything.
+3. Fetch `origin/main` and fast-forward the local `main` branch only. Do not create a
+   merge commit or change branches.
+4. Re-read `AGENTS.md`, `.agents/README.md`, `agent_personality.yaml`, templates, and
+   reference notes before resuming the session. Then briefly confirm that the updated
+   instructions are active.
+
+### Configure vault
+
+Recognize **“configure vault”**, **“change vault”**, **“move vault”**, and requests to
+change the private-vault location.
+
+1. Say that this changes where future private records are read and written, does not move
+   existing files, and ask for confirmation.
+2. After confirmation, ask for the new absolute path if it was not already supplied.
+   Reject relative or ambiguous paths.
+3. Create the standard vault directories at the confirmed path, update only the ignored
+   `.agents/local-workspace.yaml` configuration, and do not copy, synchronize, or delete
+   the previous vault.
+4. Reload the new vault's records, user model, and coaching journal before resuming. Say
+   that the new vault is active and that the previous vault remains unchanged.
+
 ## Hybrid private-data vault
 
 The Git repository stores the agent system: instructions, templates, and offline

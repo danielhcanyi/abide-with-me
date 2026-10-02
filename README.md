@@ -64,6 +64,15 @@ From Farnam Street: https://fs.blog/decision-journal/
 - The Private vault contains `decisions/`, `observations/`, `reflections/`, `resources/`,
   and `.agents/` context directories.
 
+### User commands
+
+In a user-mode chat, these short commands control the local setup:
+
+| Say this | What the agent does after confirmation |
+| --- | --- |
+| `update agent` or `pull updates` | Safely fast-forwards the Project Folder's `main` branch from `origin/main`, then reloads the agent instructions. It refuses to proceed if the checkout is dirty or not on `main`. |
+| `configure vault` | Changes the private-vault location after asking for a new absolute path. Existing private files stay where they are; nothing is copied or deleted. |
+
 ### Workspace map
 | Path | Purpose |
 | --- | --- |
