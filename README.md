@@ -32,7 +32,7 @@ From Farnam Street: https://fs.blog/decision-journal/
 
 ### :warning: PRIVACY WARNING
 **Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked or want the A.I. service to know about you**
-## Setup
+### Setup
 - Download / clone this whole project as a folder on your machine
 - Open the folder in an A.I. chat session to use the system
 - Open the folder as an Obsidian vault, for example, to read / edit your journal entries
