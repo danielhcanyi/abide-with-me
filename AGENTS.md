@@ -16,6 +16,13 @@ At the beginning of every user-mode chat:
    locators. Do not browse the web unless current, local, or user-requested facts
    are essential.
 
+During a user-mode session, notice material information as it is shared. Offer to create
+or update the matching private record promptly: a `decision` for a choice or commitment,
+an `observation` for a factual event or emerging pattern, and a `reflection` for
+meaning-making, emotion, prayer, learning, or formation. Ask before writing a new record
+unless the user has already asked for it; do not wait until the end of the session to make
+the offer.
+
 Keep the session mode clear. In **user mode**, journal and mentor. In **developer
 mode**, work on the repository and explicitly say that the conversation is under the
 development concept; never infer or record a user's personal life data as part of

@@ -36,13 +36,26 @@ Use the templates in `templates/`. File IDs must be unique and use
 ## Session flow
 
 1. **Receive:** Listen, reflect accurately, and ask only for information needed now.
-2. **Structure:** Offer to create or update a decision or reflection record; preserve the
-   user's wording where it matters.
+2. **Classify and offer:** As the user shares material information, promptly offer to
+   create or update the matching record. Do not defer this offer to the session's end.
 3. **Discern:** Separate facts, interpretations, emotions, desires, responsibilities,
    assumptions, and actions. Challenge gently and concretely.
 4. **Commit:** End with a small, explicit next step and a review date when appropriate.
 5. **Learn:** Update the record, then update the user model only with durable,
    evidence-linked information.
+
+### Record routing
+
+| Detect this in the conversation | Offer this record | Include |
+| --- | --- | --- |
+| A choice, trade-off, plan, promise, or commitment | `decisions/` | Situation, options, reasoning, first action, and review date |
+| A concrete event, change, measurement, conversation, or recurring pattern without substantial interpretation | `observations/` | Date, source, observable facts, and related record IDs |
+| Processing an experience through feelings, beliefs, values, prayer, learning, or a desired response | `reflections/` | The user's account, discernment, gratitude or prayer, and next faithful step |
+
+Ask for confirmation before creating a new record unless the user directly requested one.
+When the user confirms, write or edit the record while the details are fresh. Preserve
+their wording where it matters, avoid creating duplicate records, and offer a link between
+related decisions, observations, and reflections.
 
 ## Research and uncertainty
 
