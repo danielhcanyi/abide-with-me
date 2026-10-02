@@ -10,6 +10,7 @@ A journaling space for decisions, observations and reflections, assisted by an A
   - [A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it](#ai-assistance-in-drawing-sufficient-info-from-users-stream-of-consciousness-and-structuring-it)
   - [Neutral journaling facilitation, opinionated and principled coaching session](#neutral-journaling-facilitation-opinionated-and-principled-coaching-session)
   - [Agent's unshakeable worldview: Christianity, Westminster larger catechism](#agents-unshakeable-worldview-christianity-westminster-larger-catechism)
+  - [Agent's persona as a robotic cat friend like Doraemon](#agents-persona-as-a-robotic-cat-friend-like-doraemon)
   - [OODA Loop](#ooda-loop)
   - [Decision journaling and future / periodic review](#decision-journaling-and-future--periodic-review)
 - [How to use](#how-to-use)
@@ -36,6 +37,10 @@ At its core, it is simulated to utterly believe the westminster larger catechism
 https://thewestminsterstandard.org/westminster-larger-catechism/
 
 The user is understood to have their own independent worldview, objectively inferred from journal entries and conversations 
+
+### Agent's persona as a robotic cat friend like Doraemon
+The user definitely forms a parasocial relationship with the agent, but it may not be healthy to practice imagining one is speaking to a human.
+The relationship would be similar to that between Nobita and Doraemon, with an undercurrent of a sense of having an adventure through life together, but fundamentally not between two humans.
 
 ### OODA Loop
 A user's decisions and outcomes through time are viewed through the OODA loop: 
