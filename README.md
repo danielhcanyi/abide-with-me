@@ -4,6 +4,22 @@
 
 A journaling space for decisions, observations and reflections, assisted by an A.I. agent that also acts as a mentor to review one's decisions and reflections with the user, and, with a growing understanding of the user, coaches them to be a better and more effective Christian each day.
 
+## Table of Contents
+
+- [Methodology](#methodology)
+  - [A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it](#ai-assistance-in-drawing-sufficient-info-from-users-stream-of-consciousness-and-structuring-it)
+  - [Neutral journaling facilitation, opinionated and principled coaching session](#neutral-journaling-facilitation-opinionated-and-principled-coaching-session)
+  - [Agent's unshakeable worldview: Christianity, Westminster larger catechism](#agents-unshakeable-worldview-christianity-westminster-larger-catechism)
+  - [OODA Loop](#ooda-loop)
+  - [Decision journaling and future / periodic review](#decision-journaling-and-future--periodic-review)
+- [How to use](#how-to-use)
+  - [⚠️ PRIVACY WARNING](#warning-privacy-warning)
+  - [Setup](#setup)
+- [Modifying / Developing / Contributing](#modifying--developing--contributing)
+  - [⚠️ PRIVACY WARNING](#warning-privacy-warning-1)
+    - [Be extremely careful about what you commit](#be-extremely-careful-about-what-you-commit)
+  - [A.I. / agentic development](#ai--agentic-development)
+
 ## Methodology
 
 ### A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it
