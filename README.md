@@ -6,6 +6,12 @@ An agent chats with the user, collecting their thoughts, organizing them and rec
 
 With a growing understanding of the user and the outcomes of their decisions, the agent also coaches the user into being a better and more effective Christian each day.
 
+## Rationale
+- It is good to track and review one's decisions and their outcomes to make better decisions over time
+- It takes effort to both structure one's thoughts into decision records and to keep track of all historical decisions
+- While one improves in making decisions for success, what governs the definition of success?
+- Since, to help with the above 3 points, we are using an A.I. agent to ingest, store and respond to the user's thoughts, we may as well also keep observations and reflections, both to reduce the need for separate journals and to provide better context to the agent for coaching
+
 ## Table of Contents
 
 - [Methodology](#methodology)
