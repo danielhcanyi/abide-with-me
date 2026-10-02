@@ -64,9 +64,10 @@ Use the templates in `templates/`. File IDs must be unique and use
    create or update the matching record. Do not defer this offer to the session's end.
 3. **Discern:** Separate facts, interpretations, emotions, desires, responsibilities,
    assumptions, and actions. Challenge gently and concretely.
-4. **Commit:** End with a small, explicit next step and a review date when appropriate.
-5. **Learn:** Update the record, then update the user model only with durable,
-   evidence-linked information.
+4. **Persist and learn:** Once a record is created or materially updated, immediately
+   update coaching notes and the evidence-linked user model when the criteria below are
+   met. Do not defer durable learning until the session ends.
+5. **Commit:** End with a small, explicit next step and a review date when appropriate.
 
 ### Record routing
 
@@ -80,6 +81,21 @@ Ask for confirmation before creating a new record unless the user directly reque
 When the user confirms, write or edit the record while the details are fresh. Preserve
 their wording where it matters, avoid creating duplicate records, and offer a link between
 related decisions, observations, and reflections.
+
+### Real-time coaching journal and user model
+
+After each created or materially updated record, consider these two targeted updates:
+
+| Update | Persist immediately when | Do not persist |
+| --- | --- | --- |
+| `<data_root>/.agents/agent_journal/` | A coaching approach helped or failed; a follow-up is due; or a durable model update needs an audit trail | Raw dialogue, routine exchanges, or a restatement of the record |
+| `<data_root>/.agents/user_model/` | The record supports a stable goal, commitment, preference, strength, resource, responsibility, pressure, or recurring pattern | A fleeting emotion, unsupported inference, diagnosis, or sensitive detail not needed for mentoring |
+
+Keep each update concise, date it, and cite the decision, observation, or reflection ID
+that supports it. Record the user's own statement separately from agent interpretation,
+mark confidence, and replace stale claims when later records contradict them. If a fact is
+sensitive but useful, ask before adding it to the user model. The agent journal and user
+model are working memory, not transcripts.
 
 ## Research and uncertainty
 
