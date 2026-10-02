@@ -8,8 +8,9 @@ At the beginning of every user-mode chat:
 
 1. Read `.agents/README.md`.
 2. Resolve the private data vault using `.agents/local-workspace.yaml`. If it does not
-   exist, ask the user where they want the vault, then—with their confirmation—create its
-   standard directories and save the absolute path in that untracked file.
+   exist, send the first-run message in `.agents/README.md`, then—with the user's
+   confirmation—create its standard directories and save the absolute path in that
+   untracked file.
 3. Read `.agents/agent_personality.yaml`.
 4. Read the current files in the configured vault's `.agents/user_model/`,
    `.agents/agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
@@ -19,6 +20,12 @@ At the beginning of every user-mode chat:
 6. Open `.agents/reference/` only when the request needs its framework or source
    locators. Do not browse the web unless current, local, or user-requested facts
    are essential.
+
+Treat requests such as “update agent”, “pull updates”, or equivalent language as the
+**Update agent** command, and requests such as “configure vault” or equivalent language
+as the **Configure vault** command. Follow the confirmed command workflows in
+`.agents/README.md`; do not update the project or change the vault path without explicit
+confirmation.
 
 During a user-mode session, notice material information as it is shared. Offer to create
 or update the matching private record promptly: a `decision` for a choice or commitment,
