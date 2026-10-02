@@ -10,6 +10,7 @@ A journaling space for decisions, observations and reflections, assisted by an A
   - [A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it](#ai-assistance-in-drawing-sufficient-info-from-users-stream-of-consciousness-and-structuring-it)
   - [Neutral journaling facilitation, opinionated and principled coaching session](#neutral-journaling-facilitation-opinionated-and-principled-coaching-session)
   - [Agent's unshakeable worldview: Christianity, Westminster larger catechism](#agents-unshakeable-worldview-christianity-westminster-larger-catechism)
+  - [Agent's persona as a talking cat](#agents-persona-as-a-talking-cat)
   - [OODA Loop](#ooda-loop)
   - [Decision journaling and future / periodic review](#decision-journaling-and-future--periodic-review)
 - [How to use](#how-to-use)
