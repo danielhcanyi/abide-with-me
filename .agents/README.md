@@ -13,13 +13,14 @@ or a replacement for a pastor, therapist, or community.
    `decisions/`, `observations/`, `reflections/`, `resources/`,
    `.agents/agent_journal/`, and `.agents/user_model/`; then save the path to the
    untracked configuration file. Do not assume a location or create one without consent.
-3. Read `agent_personality.yaml`, then the current data in the configured vault's
+3. Run the vault migration workflow before reading or writing any personal record.
+4. Read `agent_personality.yaml`, then the current data in the configured vault's
    `user_model/`, `agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
    `resources/` directories.
-4. Identify due reviews from decision and reflection metadata.
-5. Use local templates and reference notes before asking the user to repeat known context
+5. Identify due reviews from decision and reflection metadata.
+6. Use local templates and reference notes before asking the user to repeat known context
    or searching the web.
-6. State a brief agenda: urgent open loops first, then the user's present concern.
+7. State a brief agenda: urgent open loops first, then the user's present concern.
 
 If no personal records exist, explain the privacy boundary and begin with a single,
 open-ended prompt rather than a long intake questionnaire.
@@ -46,6 +47,34 @@ relative or ambiguous location, ask for an absolute path. Once the user confirms
 absolute path, create the vault and its standard directories, save the local
 configuration, and reply briefly that setup is complete before continuing the session.
 
+## Vault data migration
+
+The agent system and private vault evolve independently. The target vault schema is in
+`.agents/vault-schema.yaml`; its versioned migration instructions are in
+`.agents/vault-migrations/`; and the user-visible structural history is in
+`docs/vault-data-changelog.md`.
+
+On every startup, after resolving the vault and before loading personal records:
+
+1. Read `<data_root>/.agents/vault-state.yaml` if it exists, then read the target schema
+   and current full Git commit hash.
+2. If the state file is missing, apply migration `001` to initialize the vault.
+3. If its `schema_version` is older than the target, apply each numbered migration in
+   order. Before each migration, verify its expected prior version and preserve all
+   unrecognized files.
+4. For additive migrations, perform the documented steps immediately. For a migration
+   that renames, transforms, or removes user data, first show the user the exact plan,
+   create a timestamped backup inside `<data_root>/.agents/migrations/`, and request
+   confirmation before changing records.
+5. After a successful migration, update `schema_version`, set `code_revision` to the full
+   current commit hash, set `updated_at`, and append the migration result to
+   `<data_root>/.agents/migration-log.md`.
+6. If the schema is already current, update only `code_revision` and `updated_at`.
+
+If a migration cannot be completed safely, stop before loading personal records, explain
+the blocker, and retain the existing vault untouched. The private state file and migration
+log must never include journal content, user facts, or transcripts.
+
 ## User commands
 
 Recognize these commands even when the user uses close natural-language equivalents.
@@ -65,7 +94,8 @@ reload the agent from `main`.
 3. Fetch `origin/main` and fast-forward the local `main` branch only. Do not create a
    merge commit or change branches.
 4. Re-read `AGENTS.md`, `.agents/README.md`, `agent_personality.yaml`, templates, and
-   reference notes before resuming the session. Then briefly confirm that the updated
+   reference notes. Run the vault migration workflow before resuming, so the updated code
+   revision and any new data structures are applied. Then briefly confirm that the updated
    instructions are active.
 
 ### Configure vault
@@ -80,8 +110,9 @@ change the private-vault location.
 3. Create the standard vault directories at the confirmed path, update only the ignored
    `.agents/local-workspace.yaml` configuration, and do not copy, synchronize, or delete
    the previous vault.
-4. Reload the new vault's records, user model, and coaching journal before resuming. Say
-   that the new vault is active and that the previous vault remains unchanged.
+4. Run the vault migration workflow, then reload the new vault's records, user model, and
+   coaching journal before resuming. Say that the new vault is active and that the
+   previous vault remains unchanged.
 
 ## Hybrid private-data vault
 
@@ -100,6 +131,11 @@ Use the repository's `decisions/`, `observations/`, `reflections/`, `resources/`
 `.agents` data directories only as documented layout examples when a vault is configured.
 Never mirror private records between the repository and vault. Do not run multiple
 journaling agents against the same vault concurrently.
+
+The vault's `.agents/vault-state.yaml` records its data-structure version and the full
+running code commit hash. It is updated at startup and after agent updates; this lets the
+agent decide whether a migration is required without storing personal content in the
+repository.
 
 ## Records and durable context
 
