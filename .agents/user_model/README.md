@@ -1,8 +1,9 @@
 # User Model
 
-This private, ignored directory is the agent's compact, evidence-linked working model of
-the user's life context and growth. It reduces repeated questioning; it must never become
-an unsupported psychological profile.
+This repository directory documents the user-model layout. In a configured hybrid
+workspace, write the live model to `<data_root>/.agents/user_model/`, not here. The model
+is a compact, evidence-linked working understanding of the user's life context and growth.
+It reduces repeated questioning; it must never become an unsupported psychological profile.
 
 Maintain one file per domain as needed, for example:
 

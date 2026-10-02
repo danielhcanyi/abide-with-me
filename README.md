@@ -4,10 +4,11 @@
 
 A journaling space for decisions, observations and reflections, assisted by an A.I. agent that also acts as a mentor to review one's decisions and reflections with the user, and, with a growing understanding of the user, coaches them to be a better and more effective Christian each day.
 
-The workspace is local-first: personal records are ignored by Git, while reusable agent
-instructions, templates, and offline reference notes are versioned. This lets new chat
-sessions recover relevant context from the workspace instead of repeatedly rebuilding it
-from conversation or web searches.
+The workspace is local-first: reusable agent instructions, templates, and offline
+reference notes are versioned, while the user's journal and durable context live in a
+separate local data vault. This lets new chat sessions recover relevant context without
+repeatedly rebuilding it from conversation or web searches, and lets the user see updates
+in their own filesystem immediately.
 
 ## Table of Contents
 
@@ -60,13 +61,14 @@ From Farnam Street: https://fs.blog/decision-journal/
 ### Setup
 - Download / clone this whole project as a folder on your machine
 - Open the folder in an A.I. chat session to use the system
-- Open the folder as an Obsidian vault, for example, to read / edit your journal entries
-- Keep personal records in `decisions/`, `observations/`, `reflections/`, `resources/`,
-  and `.agents/`'s private data directories. They are ignored by Git; confirm the staged
-  diff before every commit.
-- Start a user session by asking the agent to follow `AGENTS.md`. The agent will load the
-  current user model, due reviews, templates, and local references before asking for more
-  context.
+- Start a user session by asking the agent to follow `AGENTS.md`. On the first session,
+  the agent asks where the private local data vault should live and saves that absolute
+  path only in the ignored `.agents/local-workspace.yaml` file.
+- Open the chosen data-vault directory—not the Git repository—as an Obsidian vault or in
+  another editor. The user will then see record changes as the agent writes them.
+- The data vault contains `decisions/`, `observations/`, `reflections/`, `resources/`,
+  and `.agents/` context directories. It is never committed, copied, or synchronized by
+  Git. Confirm the staged diff before every commit.
 
 ### Workspace map
 | Path | Purpose |
@@ -76,9 +78,10 @@ From Farnam Street: https://fs.blog/decision-journal/
 | `.agents/agent_personality.yaml` | Voice, theological posture, and safety boundaries |
 | `.agents/templates/` | Reusable decision, reflection, coaching-note, and user-model formats |
 | `.agents/reference/` | Offline coaching method and source locators |
-| `decisions/`, `observations/`, and `reflections/` | Private, ignored journal records |
-| `resources/` | Private, ignored shared or large material linked from journal records |
-| `.agents/agent_journal/` and `.agents/user_model/` | Private, ignored durable context and coaching notes |
+| `.agents/local-workspace.example.yaml` | Template for the ignored, user-specific data-vault location |
+| `<data root>/decisions/`, `observations/`, and `reflections/` | Live private journal records |
+| `<data root>/resources/` | Live shared or large material linked from journal records |
+| `<data root>/.agents/agent_journal/` and `user_model/` | Live durable context and coaching notes |
 
 ## Modifying / Developing / Contributing
 

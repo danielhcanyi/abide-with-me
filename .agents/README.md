@@ -7,27 +7,51 @@ or a replacement for a pastor, therapist, or community.
 
 ## Startup protocol
 
-1. Read `agent_personality.yaml`.
-2. Read the READMEs and current data in `user_model/`, `agent_journal/`, `decisions/`,
-   `observations/`, `reflections/`, and `resources/`.
-3. Identify due reviews from decision and reflection metadata.
-4. Use local templates and reference notes before asking the user to repeat known context
+1. Resolve the private data vault from `.agents/local-workspace.yaml`.
+2. If no configuration exists, ask the user for an absolute local path. After they
+   confirm it, create these directories under that path:
+   `decisions/`, `observations/`, `reflections/`, `resources/`,
+   `.agents/agent_journal/`, and `.agents/user_model/`; then save the path to the
+   untracked configuration file. Do not assume a location or create one without consent.
+3. Read `agent_personality.yaml`, then the current data in the configured vault's
+   `user_model/`, `agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
+   `resources/` directories.
+4. Identify due reviews from decision and reflection metadata.
+5. Use local templates and reference notes before asking the user to repeat known context
    or searching the web.
-5. State a brief agenda: urgent open loops first, then the user's present concern.
+6. State a brief agenda: urgent open loops first, then the user's present concern.
 
 If no personal records exist, explain the privacy boundary and begin with a single,
 open-ended prompt rather than a long intake questionnaire.
+
+## Hybrid private-data vault
+
+The Git repository stores the agent system: instructions, templates, and offline
+references. The configured private data vault stores the user's live records. The vault is
+the single source of truth and can be opened directly in Obsidian or another local editor,
+so a user sees agent updates immediately without a commit, push, pull, copy, or sync.
+
+`.agents/local-workspace.yaml` is a local, ignored configuration containing:
+
+```yaml
+data_root: /absolute/path/to/abide-with-me-data
+```
+
+Use the repository's `decisions/`, `observations/`, `reflections/`, `resources/`, and
+`.agents` data directories only as documented layout examples when a vault is configured.
+Never mirror private records between the repository and vault. Do not run multiple
+journaling agents against the same vault concurrently.
 
 ## Records and durable context
 
 | Location | Purpose | When to update |
 | --- | --- | --- |
-| `decisions/` | One Markdown record for each material decision | When a decision is formed, changed, or reviewed |
-| `observations/` | Dated factual notes and early patterns | When useful context should be preserved before interpretation |
-| `reflections/` | First-person observations and learning | When the user wants to process an experience or periodic review |
-| `resources/` | Shared or large material linked from journal records | When a source is too large or useful to duplicate |
-| `agent_journal/` | Concise notes on coaching process | Only when the note prevents repeated discovery |
-| `user_model/` | Compact, evidence-linked context by life domain | When supported facts, commitments, or useful patterns change |
+| `<data_root>/decisions/` | One Markdown record for each material decision | When a decision is formed, changed, or reviewed |
+| `<data_root>/observations/` | Dated factual notes and early patterns | When useful context should be preserved before interpretation |
+| `<data_root>/reflections/` | First-person observations and learning | When the user wants to process an experience or periodic review |
+| `<data_root>/resources/` | Shared or large material linked from journal records | When a source is too large or useful to duplicate |
+| `<data_root>/.agents/agent_journal/` | Concise notes on coaching process | Only when the note prevents repeated discovery |
+| `<data_root>/.agents/user_model/` | Compact, evidence-linked context by life domain | When supported facts, commitments, or useful patterns change |
 | `reference/` | Reusable, non-personal frameworks and source locators | When a stable source or method is repeatedly useful |
 
 Use the templates in `templates/`. File IDs must be unique and use
@@ -36,13 +60,26 @@ Use the templates in `templates/`. File IDs must be unique and use
 ## Session flow
 
 1. **Receive:** Listen, reflect accurately, and ask only for information needed now.
-2. **Structure:** Offer to create or update a decision or reflection record; preserve the
-   user's wording where it matters.
+2. **Classify and offer:** As the user shares material information, promptly offer to
+   create or update the matching record. Do not defer this offer to the session's end.
 3. **Discern:** Separate facts, interpretations, emotions, desires, responsibilities,
    assumptions, and actions. Challenge gently and concretely.
 4. **Commit:** End with a small, explicit next step and a review date when appropriate.
 5. **Learn:** Update the record, then update the user model only with durable,
    evidence-linked information.
+
+### Record routing
+
+| Detect this in the conversation | Offer this record | Include |
+| --- | --- | --- |
+| A choice, trade-off, plan, promise, or commitment | `decisions/` | Situation, options, reasoning, first action, and review date |
+| A concrete event, change, measurement, conversation, or recurring pattern without substantial interpretation | `observations/` | Date, source, observable facts, and related record IDs |
+| Processing an experience through feelings, beliefs, values, prayer, learning, or a desired response | `reflections/` | The user's account, discernment, gratitude or prayer, and next faithful step |
+
+Ask for confirmation before creating a new record unless the user directly requested one.
+When the user confirms, write or edit the record while the details are fresh. Preserve
+their wording where it matters, avoid creating duplicate records, and offer a link between
+related decisions, observations, and reflections.
 
 ## Research and uncertainty
 

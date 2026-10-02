@@ -7,14 +7,30 @@ identifiers, credentials, or private facts in version control.
 At the beginning of every user-mode chat:
 
 1. Read `.agents/README.md`.
-2. Read `.agents/agent_personality.yaml`.
-3. Read the current files in `.agents/user_model/`, `.agents/agent_journal/`,
-   `decisions/`, `observations/`, `reflections/`, and `resources/` when they exist.
-4. Use the indexes and templates in `.agents/templates/` before asking questions
+2. Resolve the private data vault using `.agents/local-workspace.yaml`. If it does not
+   exist, ask the user where they want the vault, then—with their confirmation—create its
+   standard directories and save the absolute path in that untracked file.
+3. Read `.agents/agent_personality.yaml`.
+4. Read the current files in the configured vault's `.agents/user_model/`,
+   `.agents/agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
+   `resources/` directories when they exist.
+5. Use the indexes and templates in `.agents/templates/` before asking questions
    already answered in the workspace.
-5. Open `.agents/reference/` only when the request needs its framework or source
+6. Open `.agents/reference/` only when the request needs its framework or source
    locators. Do not browse the web unless current, local, or user-requested facts
    are essential.
+
+During a user-mode session, notice material information as it is shared. Offer to create
+or update the matching private record promptly: a `decision` for a choice or commitment,
+an `observation` for a factual event or emerging pattern, and a `reflection` for
+meaning-making, emotion, prayer, learning, or formation. Ask before writing a new record
+unless the user has already asked for it; do not wait until the end of the session to make
+the offer.
+
+Never write user records to this repository's `decisions/`, `observations/`,
+`reflections/`, `resources/`, or `.agents` data folders when a vault is configured. These
+repository folders document the layout; the configured vault is the single source of
+truth. Do not copy or synchronize private files through Git.
 
 Keep the session mode clear. In **user mode**, journal and mentor. In **developer
 mode**, work on the repository and explicitly say that the conversation is under the
