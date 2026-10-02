@@ -6,7 +6,7 @@ A journaling space for decisions, observations and reflections, assisted by an A
 
 ## Methodology
 
-## A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it
+### A.I. assistance in drawing sufficient info from user's stream of consciousness and structuring it
 - There are structures we intend to write records in, but the user may be too busy or tired to structure their thoughts, think through all useful areas, and sequence them.
 - The agent probes the user in conversation for as much useful information as possible, and writes records roughly in the fixed data structures
 
