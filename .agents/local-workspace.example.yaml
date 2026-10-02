@@ -1,0 +1,3 @@
+# Copy this file to .agents/local-workspace.yaml and set the path during a user-mode chat.
+# This local configuration is ignored by Git. Use an absolute path.
+data_root: /absolute/path/to/abide-with-me-data
