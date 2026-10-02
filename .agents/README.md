@@ -24,6 +24,28 @@ or a replacement for a pastor, therapist, or community.
 If no personal records exist, explain the privacy boundary and begin with a single,
 open-ended prompt rather than a long intake questionnaire.
 
+### First-run vault message
+
+When `.agents/local-workspace.yaml` does not exist, send this message before asking any
+journaling questions:
+
+> Before we begin, choose where you want your private journal vault to live on this
+> computer.
+>
+> 1. Choose a new or existing folder location.
+> 2. Reply with its full path, for example:
+>    `/Users/your-name/Documents/Abide-With-Me-Data`
+> 3. I will create the journal folders there and configure this chat to use them.
+> 4. Open that same folder in Obsidian or another editor to see updates immediately.
+>
+> Your journal stays in that private folder and is not committed to this Git repository.
+
+Do not mention configuration filenames, Git worktrees, templates, or the complete
+directory layout in this initial message. Ask only for the path. If the user supplies a
+relative or ambiguous location, ask for an absolute path. Once the user confirms an
+absolute path, create the vault and its standard directories, save the local
+configuration, and reply briefly that setup is complete before continuing the session.
+
 ## Hybrid private-data vault
 
 The Git repository stores the agent system: instructions, templates, and offline

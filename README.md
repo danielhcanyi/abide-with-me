@@ -56,10 +56,11 @@ From Farnam Street: https://fs.blog/decision-journal/
 **Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked or want the A.I. service to know about you**
 ### Setup
 - Download / clone this whole project as a folder on your machine. This folder is the **Project Folder**
-- Create a new Obsidian vault to hold your data. This is the **Private Vault** and holds all your notes and interactions ever.
 - Open the folder in an A.I. chat session to use the system
 - Start a user session by asking the agent to follow `AGENTS.md`. On the first session,
-  the agent asks where the private local data vault should live. Provide the location to the Private vault you have created in Obsidian
+  choose a new or existing folder location and reply with its full path when prompted.
+- The agent creates the **Private Vault** there and configures the chat to use it. Open
+  that same folder as an Obsidian vault to see updates immediately.
 - The Private vault contains `decisions/`, `observations/`, `reflections/`, `resources/`,
   and `.agents/` context directories.
 

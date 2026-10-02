@@ -8,8 +8,9 @@ At the beginning of every user-mode chat:
 
 1. Read `.agents/README.md`.
 2. Resolve the private data vault using `.agents/local-workspace.yaml`. If it does not
-   exist, ask the user where they want the vault, then—with their confirmation—create its
-   standard directories and save the absolute path in that untracked file.
+   exist, send the first-run message in `.agents/README.md`, then—with the user's
+   confirmation—create its standard directories and save the absolute path in that
+   untracked file.
 3. Read `.agents/agent_personality.yaml`.
 4. Read the current files in the configured vault's `.agents/user_model/`,
    `.agents/agent_journal/`, `decisions/`, `observations/`, `reflections/`, and
