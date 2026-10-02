@@ -27,3 +27,12 @@ https://en.wikipedia.org/wiki/OODA_loop
 
 ### Decision journaling and future / periodic review
 From Farnam Street: https://fs.blog/decision-journal/
+
+## How to use
+
+### :warning: PRIVACY WARNING
+Never say / write any very sensitive information in the files or chat sessions you would never want to be potentially leaked
+
+#### As a contributor, be extremely careful about what you commit
+- Though we are setting the repo to automatically ignore the files we know to hold user data, always check the diffs you are committing
+- Be careful not to write personal information in the non-ignored files - you or your agent may have edited these files for personalization  
